@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="./weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="background-image" id="background-image">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="WW-icon">
+                    <svg width="90" height="47" viewBox="0 0 90 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M71.834 1.67818L78.1206 3.36365L73.2061 19.8301L82.4689 16.8415L77.6172 31.1032L72.7656 45.3649L66.5523 43.4497L69.3758 35.1498L72.1993 26.85L63.4818 29.6626L71.834 1.67818Z" fill="url(#paint0_linear_129_5353)"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M66.2442 12.0463L62.7186 24.6071L60.186 15.9889L53.262 39.5811H51.1666H48.091H45.083L35.8225 3.02905H45.2182L50.0006 26.8109L56.6756 3.02905H57.5881H62.8605H63.7055L66.2442 12.0463Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M36.6489 15.7167L41.0176 32.9604L39.3325 39.6477H36.3691H33.3047H31.1831L24.2752 16.0126L17.3764 39.6477H15.2885H12.2241H9.22698L0 3.02905H9.36168L14.1267 26.8542L20.7775 3.02905H21.6868H26.9401H27.782L34.446 26.8285L36.6489 15.7167Z" fill="#CACACA"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_129_5353" x1="65.9395" y1="3.57995" x2="78.7935" y2="43.4201" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F5BD52"/>
+                        <stop offset="1" stop-color="#F5DA79"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+                </div>
+                <div class="temperature-section" id="temperature-section">
+                <!-- <div class="celsius-converter">
+                    <h1>16°</h1>
+                </div>
+                <div class="country-date">
+                    <div class="country"> -->
+                        <p id="textCountry"></p>
+                    <!-- </div>
+                    <div class="date">
+                        <p>06.09-Monday, 9sep '23</p>
+                    </div>
+                </div>
+                <div class="temperature-icon">
+                    <img src="../Cloudy.png" alt="Cloudy Image">
+                </div> -->
+            </div>
+            </div>
+            <div class="right-container">
+                <form class="search" id="form">
+                    <input type="text" name="location" id="location" placeholder="Search Location...">
+                    <button type="submit" id="submit" aria-label="Submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="transform-details" id="transform-details">
+                    <div class="weather-details">
+                        <P>Weather Details...</P>
+                    </div>
+                    <div class="transform-heading">
+                        <h3>THUNDERSTORM WITH LIGHT DRIZZLE</h3>
+                    </div>
+                    <div class="deatils-container" id="deatils-container">
+                         <!-- <div class="item-details" id="item-details"> -->
+                            <!-- <div class="left-detail">
+                                <h4>Temp Max</h4>
+                            </div>
+                            <div class="right-details">
+                                <div class="celsius-with-detail-icon">
+                                    <div class="celsius">  -->
+                                        <p id="TempMax-Text" class="TempMax-Text"></p>
+                                     <!-- </div>
+                                    <div class="detail-icon">
+                                        <i class="fa-solid fa-temperature-three-quarters" style="color: #db2d1a;"></i>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- </div>  -->
+                    </div>
+                    <div class="deatils-container" id="deatils-container">
+                        <!-- <div class="item-details"> -->
+                            <!-- <div class="left-detail left-detail2">
+                                <h4 class="heading2">Temp Main</h4>
+                            </div>
+                            <div class="right-details right-details2">
+                                <div class="celsius-with-detail-icon celsius-detail2">
+                                    <div class="celsius celcius2"> -->
+                                        <p id="Temp-mini"></p>
+                                    <!-- </div>
+                                    <div class="detail-icon detail-icon2">
+                                        <i class="fa-solid fa-temperature-empty" style="color: #09409f;"></i>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="deatils-container" id="details-container2">
+                        <!-- <div class="item-details item-humidity">
+                            <div class="left-detail left-humidity">
+                                <h4 class="humidity-text">Humidity</h4>
+                            </div>
+                            <div class="right-details humidity-right">
+                                <div class="celsius-with-detail-icon celsius-detail-humidity">
+                                    <div class="celsius humid-celcius"> -->
+                                        <p id="Humidity"></p>
+                                    <!-- </div>
+                                    <div class="detail-icon detail-humidity">
+                                        <img src="../outline (1).png" alt="Humidity">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="deatils-container">
+                        <!-- <div class="item-details item-cloudy">
+                            <div class="left-detail left-cloudy">
+                                <h4 class="heading-cloudy">Cloudy</h4>
+                            </div>
+                            <div class="right-details right-cloudy">
+                                <div class="celsius-with-detail-icon celsius-detail-cloudy">
+                                    <div class="celsius celsius-cloudy"> -->
+                                        <p id="Cloudy"></p>
+                                    <!-- </div>
+                                    <div class="detail-icon cloudy detail-cloudy">
+                                        <img src="../Cloudy.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="deatils-container">
+                        <!-- <div class="item-details wind-detail">
+                            <div class="left-detail left-wind">
+                                <h4 class="heading-wind">Wind</h4>
+                            </div>
+                            <div class="right-details right-wind">
+                                <div class="celsius-with-detail-icon celsius-detail-wind">
+                                    <div class="celsius celsius-wind"> -->
+                                        <p id="Wind"></p>
+                                    <!-- </div>
+                                    <div class="detail-icon wind detail-icon-wind">
+                                        <img src="../outline (3).png" alt="Wind">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./weather.js"></script>
+</body>
+</html>
