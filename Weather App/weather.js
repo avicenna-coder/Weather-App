@@ -11,29 +11,31 @@ let transformDetails = document.getElementById("transform-details")
 let bgImageContainer = document.getElementById("background-image")
 let mainContainer = document.getElementById("main-container")
 let imageArray = [
-    'url(./cold1.jpg)',
-    'url(./cold2.jpg)',
-    'url(./cold3.jpg)',
-    'url(./Not-too-cold.jpg)',
-    'url(./rain1.jpg)',
-    'url(./sun1.jpg)'
-]
+    'https://i.im.ge/2024/10/29/kRbTU1.cold1.jpeg',
+    'https://i.im.ge/2024/10/29/kRbutW.cold2.jpeg',
+    'https://i.im.ge/2024/10/29/kRb1OT.cold3.jpeg',
+    'https://i.im.ge/2024/10/29/kRbsUx.Not-too-cold.jpeg',
+    'https://i.im.ge/2024/10/29/kRb74J.rain1.jpeg',
+    'https://i.im.ge/2024/10/29/kRb0mF.sun1.jpeg'
+];
 
-const changeBackground = (dataValue)=>{
+const changeBackground = (dataValue) => {
     let tempMax = dataValue.main.temp_max;
-    let convertedMaxTemp = (tempMax - 273.15).toFixed(); // Remove '°C' for comparison
-if(convertedMaxTemp < 10){
-    bgImageContainer.style.backgroundImage = imageArray[2];
-}else if(convertedMaxTemp >= 11 && convertedMaxTemp <=17){
-    bgImageContainer.style.backgroundImage = imageArray[4];
-}else if(convertedMaxTemp >= 18 && convertedMaxTemp <=22){
-    bgImageContainer.style.backgroundImage = imageArray[1];
-}else if(convertedMaxTemp >= 23 && convertedMaxTemp <=40){
-    bgImageContainer.style.backgroundImage = imageArray[5];
-}else{
-    bgImageContainer.style.backgroundImage = `url(../bg-weather.png)`;
-}
-}
+    let convertedMaxTemp = (tempMax - 273.15).toFixed(); // Convert from Kelvin to Celsius
+    
+    if (convertedMaxTemp < 10) {
+        bgImageContainer.style.backgroundImage = `url(${imageArray[2]})`;
+    } else if (convertedMaxTemp >= 11 && convertedMaxTemp <= 17) {
+        bgImageContainer.style.backgroundImage = `url(${imageArray[4]})`;
+    } else if (convertedMaxTemp >= 18 && convertedMaxTemp <= 22) {
+        bgImageContainer.style.backgroundImage = `url(${imageArray[1]})`;
+    } else if (convertedMaxTemp >= 23 && convertedMaxTemp <= 40) {
+        bgImageContainer.style.backgroundImage = `url(${imageArray[5]})`;
+    } else {
+        bgImageContainer.style.backgroundImage = `url(https://i.im.ge/2024/10/29/kRb0mF.sun1.jpeg)`;
+    }
+};
+
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
